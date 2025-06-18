@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "app.fullname" . }}
+  name: {{ .Chart.Name }}
 spec:
   replicas: {{ .Values.replicaCount }}
   strategy:
@@ -11,11 +11,11 @@ spec:
       maxUnavailable: 1
   selector:
     matchLabels:
-      app: {{ include "app.name" . }}
+      app: {{ .Chart.Name }}
   template:
     metadata:
       labels:
-        app: {{ include "app.name" . }}
+        app: {{ .Chart.Name }}
     spec:
       containers:
         - name: {{ .Chart.Name }}
