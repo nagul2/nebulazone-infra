@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: nebulazone-app
+namespace: nebulazone-app
+annotations:
+    argocd-image-updater.argoproj.io/image-list: dungbik/nebulazone-app
+    argocd-image-updater.argoproj.io/myapp.update-strategy: latest
+    argocd-image-updater.argoproj.io/write-back-method: git
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/nbc-7Guys/nebulazone-infra.git'
+    targetRevision: HEAD
+    path: app
+    helm:
+      valueFiles:
+        - values.yaml
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: nebulazone-app
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
