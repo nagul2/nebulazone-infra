@@ -61,7 +61,7 @@ spec:
           volumeMounts:
             - name: app-logs
               mountPath: /logs
-            - name: filebeat-config.yaml
+            - name: filebeat-config
               mountPath: /etc/filebeat.yml
               subPath: filebeat.yml
       volumes:
@@ -69,6 +69,6 @@ spec:
           hostPath:
             path: /var/log/app
             type: DirectoryOrCreate
-        - name: filebeat-config.yaml
+        - name: filebeat-config
           configMap:
             name: filebeat-config
