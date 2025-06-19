@@ -49,3 +49,18 @@ spec:
               port: 8080
             initialDelaySeconds: 300
             periodSeconds: 10
+        - name: filebeat
+          image: docker.elastic.co/beats/filebeat:8.18.1
+          args: [
+            "-c", "/etc/filebeat.yml",
+            "-e"
+          ]
+          env:
+            - name: FILEBEAT_SERVICE
+              value: app-filebeat
+          volumeMounts:
+            - name: app-logs
+              mountPath: /logs
+            - name: filebeat-config.yaml
+              mountPath: /etc/filebeat.yml
+              subPath: filebeat.yml
