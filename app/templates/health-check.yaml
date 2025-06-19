@@ -1,0 +1,15 @@
+apiVersion: networking.gke.io/v1
+kind: HealthCheckPolicy
+metadata:
+  name: app-healthcheck
+  namespace: nebulazone-app
+spec:
+  default:
+    config:
+      type: HTTP
+      httpHealthCheck:
+        requestPath: /health
+  targetRef:
+    group: ""
+    kind: Service
+    name: app
