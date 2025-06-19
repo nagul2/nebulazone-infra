@@ -11,7 +11,7 @@ data:
           - /app/logs/mylog.log
         fields:
           log_type: app
-          service: app_log
+          service: ${FILEBEAT_SERVICE}
         fields_under_root: true
 
       - type: log
@@ -20,7 +20,7 @@ data:
           - /app/logs/mylog.error.log
         fields:
           log_type: error
-          service: app_err
+          service: ${FILEBEAT_SERVICE}
         fields_under_root: true
 
     output.logstash:

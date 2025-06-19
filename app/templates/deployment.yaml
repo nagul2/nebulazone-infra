@@ -55,6 +55,11 @@ spec:
         - name: filebeat
           image: docker.elastic.co/beats/filebeat:8.18.1
           args: ["-c", "/etc/filebeat.yml", "-e"]
+          env:
+            - name: FILEBEAT_SERVICE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
           resources:
             limits:
               memory: 200Mi
