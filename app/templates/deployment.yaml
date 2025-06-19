@@ -64,3 +64,11 @@ spec:
             - name: filebeat-config.yaml
               mountPath: /etc/filebeat.yml
               subPath: filebeat.yml
+      volumes:
+        - name: app-logs
+          hostPath:
+            path: /var/log/app
+            type: DirectoryOrCreate
+        - name: filebeat-config.yaml
+          configMap:
+            name: filebeat-config
