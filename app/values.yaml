@@ -35,6 +35,21 @@ secrets:
     key: JWT_SECRET_KEY
   - name: redis-password
     key: SPRING_DATA_REDIS_PASSWORD
+  - name: aws-access-key
+    key: AWS_ACCESS_KEY
+  - name: aws-s3-bucket
+    key: AWS_S3_BUCKET
+  - name: aws-secret-key
+    key: AWS_SECRET_KEY
+  - name: kakao-api-key
+    key: KAKAO_API_KEY
+  - name: naver-api-key
+    key: NAVER_API_KEY
+  - name: naver-api-secret-key
+    key: NAVER_API_SECRET_KEY
+  - name: toss-secret-key
+    key: TOSS_SECRET_KEY
+
 
 logstash:
   hosts: ["34.47.74.190:5044"]
