@@ -8,7 +8,7 @@ spec:
     config:
       type: HTTP
       httpHealthCheck:
-        requestPath: /health
+        requestPath: /actuator/health
   targetRef:
     group: ""
     kind: Service
