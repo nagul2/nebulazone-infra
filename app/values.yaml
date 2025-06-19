@@ -9,8 +9,8 @@ image:
   pullPolicy: IfNotPresent
 
 service:
-  type: LoadBalancer
-  port: 8080
+  type: ClusterIP
+  port: 80
 
 resources:
   requests:
