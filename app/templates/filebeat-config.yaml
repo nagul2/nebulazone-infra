@@ -8,7 +8,7 @@ data:
       - type: log
         enabled: true
         paths:
-          - /var/log/app/mylog.log
+          - /app/logs/mylog.log
         fields:
           log_type: app
           service: app_log
@@ -17,7 +17,7 @@ data:
       - type: log
         enabled: true
         paths:
-          - /var/log/app/mylog.error.log
+          - /app/logs/mylog.error.log
         fields:
           log_type: error
           service: app_err

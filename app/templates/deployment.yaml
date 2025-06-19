@@ -51,7 +51,7 @@ spec:
             periodSeconds: 10
           volumeMounts:
             - name: app-logs
-              mountPath: /var/log/app
+              mountPath: /app/logs
         - name: filebeat
           image: docker.elastic.co/beats/filebeat:8.18.1
           args: ["-c", "/etc/filebeat.yml", "-e"]
@@ -67,7 +67,7 @@ spec:
               mountPath: /etc/filebeat.yml
               subPath: filebeat.yml
             - name: app-logs
-              mountPath: /var/log/app
+              mountPath: /app/logs
       volumes:
         - name: filebeat-config
           configMap:
