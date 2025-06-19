@@ -68,9 +68,9 @@ spec:
               subPath: filebeat.yml
             - name: app-logs
               mountPath: /var/log/app
-        volumes:
-          - name: filebeat-config
-            configMap:
-              name: filebeat-config
-          - name: app-logs
-            emptyDir: {}
+      volumes:
+        - name: filebeat-config
+          configMap:
+            name: filebeat-config
+        - name: app-logs
+          emptyDir: {}
