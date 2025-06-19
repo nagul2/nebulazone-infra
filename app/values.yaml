@@ -37,4 +37,4 @@ secrets:
     key: SPRING_DATA_REDIS_PASSWORD
 
 logstash:
-  hosts: ["10.178.0.14:5044"]
+  hosts: ["34.47.89.172:5044"]
