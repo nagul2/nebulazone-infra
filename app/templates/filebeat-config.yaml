@@ -11,16 +11,16 @@ data:
           - /var/log/app/mylog.log
         fields:
           log_type: app
-          service: ${FILEBEAT_SERVICE}
+          service: app_log
         fields_under_root: true
-    
+
       - type: log
         enabled: true
         paths:
           - /var/log/app/mylog.error.log
         fields:
           log_type: error
-          service: myapp1
+          service: app_err
         fields_under_root: true
 
     output.logstash:
