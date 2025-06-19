@@ -33,5 +33,3 @@ secrets:
     key: ES_URI
   - name: jwt-secret-key
     key: JWT_SECRET_KEY
-  - name: redis-password
-    key: SPRING_DATA_REDIS_PASSWORD
