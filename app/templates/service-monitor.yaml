@@ -8,7 +8,7 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: my-app
+      app: {{ .Chart.Name }}
   endpoints:
     - port: http-actuator-metrics
       path: /actuator/prometheus
