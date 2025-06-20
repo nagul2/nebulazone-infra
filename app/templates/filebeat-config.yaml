@@ -24,4 +24,4 @@ data:
         fields_under_root: true
 
     output.logstash:
-      hosts: {{ .Values.logstash.hosts }}
+      hosts: ${LOGSTASH_HOSTS}

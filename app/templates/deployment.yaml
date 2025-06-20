@@ -60,6 +60,11 @@ spec:
               valueFrom:
                 fieldRef:
                   fieldPath: metadata.name
+            - name: LOGSTASH_HOSTS
+              valueFrom:
+                secretKeyRef:
+                  name: my-app-secret
+                  key: LOGSTASH_HOSTS
           resources:
             limits:
               memory: 200Mi
