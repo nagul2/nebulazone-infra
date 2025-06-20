@@ -12,4 +12,4 @@ spec:
   targetRef:
     group: ""
     kind: Service
-    name: app
+    name: app-svc
