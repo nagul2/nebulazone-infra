@@ -4,10 +4,10 @@ metadata:
   name: nebulazone-app
   namespace: argocd
   annotations:
-    argocd-image-updater.argoproj.io/image-list: "app=dungbik/nebulazone-app"
+    argocd-image-updater.argoproj.io/image-list: "app=shlee054/nebulazone-app"
     argocd-image-updater.argoproj.io/app.helm.image-name: "image.repository"
     argocd-image-updater.argoproj.io/app.helm.image-tag: "image.tag"
-    argocd-image-updater.argoproj.io/app.update-strategy: "latest"
+    argocd-image-updater.argoproj.io/app.update-strategy: "digest"
     argocd-image-updater.argoproj.io/write-back-method: git
 spec:
   project: default

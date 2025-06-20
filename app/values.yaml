@@ -4,8 +4,8 @@ gcp:
 replicaCount: 3
 
 image:
-  repository: dungbik/nebulazone-app
-  tag: "0.0.4"
+  repository: shlee054/nebulazone-app
+  tag: latest
   pullPolicy: IfNotPresent
 
 service:
