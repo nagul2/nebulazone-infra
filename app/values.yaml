@@ -35,6 +35,7 @@ secrets:
     key: JWT_SECRET_KEY
   - name: redis-password
     key: SPRING_DATA_REDIS_PASSWORD
-
-logstash:
-  hosts: ["34.47.74.190:5044"]
+  - name: frontend_url
+    key: FRONT_END_URL
+  - name: logstash_hosts
+    key: LOGSTASH_HOSTS
