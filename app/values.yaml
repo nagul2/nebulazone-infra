@@ -1,7 +1,7 @@
 gcp:
   projectId: wide-bastion-462810-h0
 
-replicaCount: 3
+replicaCount: 1
 
 image:
   repository: shlee054/nebulazone-app
