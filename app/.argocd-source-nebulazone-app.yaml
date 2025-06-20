@@ -1,0 +1,8 @@
+helm:
+  parameters:
+  - name: image.repository
+    value: shlee054/nebulazone-app
+    forcestring: true
+  - name: image.tag
+    value: main@sha256:28414e30b91de8ea311fa274e8770f864a9f3c958e7af461699d8a64c5cbf894
+    forcestring: true
