@@ -12,5 +12,5 @@ spec:
             type: PathPrefix
             value: /
       backendRefs:
-        - name:  {{ .Chart.Name }}
+        - name:  {{ .Chart.Name }}-svc
           port: 80
