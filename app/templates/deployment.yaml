@@ -35,6 +35,8 @@ spec:
                   name: my-app-secret
                   key: {{ .key }}
             {{- end }}
+            - name: LOGGING_LEVEL_ORG_SPRINGFRAMEWORK_SECURITY
+              value: debug
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           readinessProbe:
