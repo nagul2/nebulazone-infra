@@ -26,7 +26,7 @@ data:
       - type: log
         enabled: true
         paths:
-          - /var/log/app/admin.log
+          - /var/log/app/mylog.admin.log
         fields:
           log_type: admin
           service: ${FILEBEAT_SERVICE}
