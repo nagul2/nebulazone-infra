@@ -3,6 +3,12 @@ kind: Application
 metadata:
   name: crawler
   namespace: argocd
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: "app=dungbik/nebulazone-crawler:main"
+    argocd-image-updater.argoproj.io/app.helm.image-name: "image.repository"
+    argocd-image-updater.argoproj.io/app.helm.image-tag: "image.tag"
+    argocd-image-updater.argoproj.io/app.update-strategy: "digest"
+    argocd-image-updater.argoproj.io/write-back-method: git
 spec:
   project: default
   source:
@@ -11,7 +17,7 @@ spec:
     path: crawler
     helm:
       valueFiles:
-        - ../app/values.yaml d
+        - ../crawler/values.yaml
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: crawler

@@ -1,0 +1,31 @@
+gcp:
+  projectId: wide-bastion-462810-h0
+
+replicaCount: 1
+
+image:
+  repository: dungbik/nebulazone-crawler
+  tag: "main"
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80
+
+resources:
+  requests:
+    cpu: 500m
+    memory: 1Gi
+  limits:
+    cpu: 2000m
+    memory: 4Gi
+
+secrets:
+  - name: mysql-url
+    key: SPRING_DATASOURCE_URL
+  - name: mysql-username
+    key: SPRING_DATASOURCE_USERNAME
+  - name: mysql-password
+    key: SPRING_DATASOURCE_PASSWORD
+  - name: elasticsearch-uris
+    key: ES_URI
