@@ -35,8 +35,8 @@ spec:
                   name: my-app-secret
                   key: {{ .key }}
             {{- end }}
-            - name: LOGGING_LEVEL_ORG_SPRINGFRAMEWORK_SECURITY
-              value: debug
+            - name: GCP_KEY
+              value: /var/secrets/google/key.json
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           readinessProbe:
@@ -54,6 +54,9 @@ spec:
           volumeMounts:
             - name: app-logs
               mountPath: /app/logs
+            - name: gcp-key
+              mountPath: /var/secrets/google
+              readOnly: true
         - name: filebeat
           image: docker.elastic.co/beats/filebeat:8.18.1
           args: ["-c", "/etc/filebeat.yml", "-e"]
@@ -86,3 +89,6 @@ spec:
             name: filebeat-config
         - name: app-logs
           emptyDir: {}
+        - name: gcp-key
+          secret:
+            secretName: gcp-key
