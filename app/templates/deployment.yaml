@@ -35,7 +35,7 @@ spec:
                   name: my-app-secret
                   key: {{ .key }}
             {{- end }}
-            - name: GCP_KEY
+            - name: GOOGLE_APPLICATION_CREDENTIALS
               value: /var/secrets/google/key.json
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
