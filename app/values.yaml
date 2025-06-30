@@ -53,3 +53,5 @@ secrets:
     key: FRONT_END_URL
   - name: logstash_hosts
     key: LOGSTASH_HOSTS
+  - name: logstash_key
+    key: LOGSTASH_KEY
