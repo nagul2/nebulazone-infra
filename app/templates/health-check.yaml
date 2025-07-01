@@ -8,6 +8,7 @@ spec:
     config:
       type: HTTP
       httpHealthCheck:
+        port: 9091
         requestPath: /actuator/health
   targetRef:
     group: ""
