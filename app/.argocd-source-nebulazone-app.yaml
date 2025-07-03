@@ -4,5 +4,5 @@ helm:
     value: shlee054/nebulazone-app
     forcestring: true
   - name: image.tag
-    value: main@sha256:69eb12e7855f66229f5bd915f5c3cb4dca812c8f3dbcad6a60fc445830de51c3
+    value: main@sha256:d87795abcd8fc85aeb8cd2f13c52b54458c1b9bfb3e7633c5601d8009b325fb6
     forcestring: true
