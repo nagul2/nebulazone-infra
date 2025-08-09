@@ -1,5 +1,5 @@
 gcp:
-  projectId: wide-bastion-462810-h0
+  projectId: nebulazone-self
 
 replicaCount: 1
 

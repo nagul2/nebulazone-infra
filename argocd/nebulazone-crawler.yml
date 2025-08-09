@@ -12,7 +12,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/nbc-7Guys/nebulazone-infra.git'
+    repoURL: 'https://github.com/nagul2/nebulazone-infra.git'
     targetRevision: main
     path: crawler
     helm:
