@@ -1,7 +1,7 @@
 gcp:
   projectId: nebulazone-self
 
-replicaCount: 3
+replicaCount: 1
 
 image:
   repository: shlee054/nebulazone-app
